@@ -62,13 +62,30 @@ public class UsingJTextField implements ActionListener {
 
     frame.setVisible(true);
   }
-   public void actionPerformed(ActionEvent login)
-        {
+   public void actionPerformed(ActionEvent login) {
           String user = UserText.getText();
           String password = Passwordtxt.getText();
           System.out.println(user + "," + password);
-
+          // so if they aren't admin, then you can't login?
+          // this implementation is very limited. 
           if(user.equals("Admin") && password.equals("Admin")){success.setText("Welcome!");}
           else{success.setText("Login details does not match!");}
-        }   
+  }
+
+  /*public void actionPerformed(ActionEvent event) {
+    
+  }*/
+
+  /*public void setUpButtonListeners(){
+    ActionListener buttonListener = new ActionListener () {
+      @Override
+      public void actionPerformed(ActionEvent ae) {
+        // instructions to happen when an event (button clicked)
+        // occurs
+        // putting in an event that isn't relevant. will need to have this updated.
+        System.out.println("Ouch!");
+      }
+    };
+  }*/
+  
  }
